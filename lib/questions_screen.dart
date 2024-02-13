@@ -48,12 +48,12 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  ...currentQuestion.getShuffled().map(
-                        (answer) => AnswerButton(
-                          label: answer,
-                          onClick: () => answerQuestion(answer),
-                        ),
-                      ),
+                  ...currentQuestion.shuffled.map(
+                    (answer) => AnswerButton(
+                      label: answer,
+                      onClick: () => answerQuestion(answer),
+                    ),
+                  ),
                 ],
               ),
             ),
